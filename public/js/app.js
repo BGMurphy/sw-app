@@ -1,6 +1,6 @@
 console.log('Clientside js is loaded')
 
-function myFunction() {
+function filter() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -26,7 +26,7 @@ fetch('https://swapi.dev/api/films/').then((response) => {
                 var charNum = movie.url.split("/")
                 var item = document.createElement("a")
                 var li = document.createElement('li');
-                item.href = 'localhost:3000/filmDetails/' + charNum[charNum.length - 2]
+                item.href = 'http://localhost:3000/filmDetails/' + charNum[charNum.length - 2]
                 item.innerText = movie.title
                 li.appendChild(item);
                 document.getElementById("myList").appendChild(li)

@@ -2,8 +2,6 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const myFetch = require('./utils/fetchMovieInfo')
-const fetchNounInfo = require('./utils/fetchNounInfo')
-
 
 const app = express()
 
