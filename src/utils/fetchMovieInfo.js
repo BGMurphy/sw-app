@@ -38,7 +38,7 @@ const fetchThings = (urls) => {
 }
 
 const fetchAll = async (id) => {
-    const info = await fetchMovieInfo(id)
+    let info = await fetchMovieInfo(id)
     let [planets, characters, vehicles] = await Promise.all([fetchThings(info.planets), fetchThings(info.characters), fetchThings(info.vehicles)]);
     info.planets = planets
     info.characters = characters
